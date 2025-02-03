@@ -5,7 +5,7 @@ Created on Sat Feb  1 09:58:56 2025
 The purpose of this code is to solve the Linear Mixing Model (LMM),
 a mathematical model used in hyperspectral imaging. Hyperspectral sensors collect
 light reflected from Earth's surface with many spectral bands within the visible
-spectrum. These spectal bands are collected as FINCH observes the area with mixed
+spectrum. These spectral bands are collected as FINCH observes the area with mixed
 materials (e.g. soil, crop residue, vegetation), called unique spectral signatures.
 The goal of LMM is to analyze and determine how much of each material is present in
 the observed spectrum. We are unmixing hyperspectral data!
