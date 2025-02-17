@@ -603,6 +603,23 @@ if __name__ == "__main__":
     
 
 """
+Summary:
+1. Data Loading & Preprocessing: The code reads hyperspectral data from a CSV file. It then selects numeric columns, fills
+in any missing values using the column means, and normalizes the data so that each spectral band ranges between 0 and 1.
+
+2. Endmember Extraction: This step identifies endmembers which are pure spectral signatures representing distinct materials.
+The N-FINDR algorithm (among PPI and SMACC) is used to extract these endmembers from the datatset.
+
+3. Setting up the Linear Mixing Model: The observed mixed spectrum (x) is computed as the mean of the spectra. The endmember
+Matrix (S) is formed by stacking the pure spectral signatures (each column corresponds to one material).
+
+4. Solving The Mixing Model: The code estimates the abundance vector (a), which tells you the proportion of each material
+present. The three approaches are unconstrained least squares, contstrained least squares, regularized least squares.
+
+5. Visualization: The code plots the spectral curves for selected samples to show unique signatures. Abundance estimates
+are displayed from the different methods. Geomatric relationships (via convex hull) of the endmember signatures are visualized,
+and PCA is optionally used for dimensionality reduction if needed.
+
 Conclusion:
 Why is this significant for FINCH?
 
